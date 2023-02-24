@@ -37,7 +37,8 @@ def save_diary():
         'file': file_name,
         'profile': profile_name,
         'title': title_receive,
-        'content': content_receive
+        'content': content_receive,
+        'created_at': datetime.now().strftime('%Y.%m.%d')
     }
     db.diary.insert_one(doc)
 
